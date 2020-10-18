@@ -1,0 +1,435 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "defaultTitle",
+    "description" : "defaultDescription",
+    "version" : "0.1"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:3000"
+  } ],
+  "paths" : {
+    "/products/4" : {
+      "delete" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:3000"
+      } ]
+    },
+    "/products/" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:3000"
+      } ]
+    },
+    "/products/1" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:3000"
+      } ]
+    },
+    "/category" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "404" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:3000"
+      } ]
+    },
+    "/products/3" : {
+      "put" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "name" : {
+                    "type" : "string"
+                  },
+                  "description" : {
+                    "type" : "string"
+                  },
+                  "category" : {
+                    "type" : "string"
+                  },
+                  "display_name" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "    {\r\n      \"category\": \"electronics\",\r\n      \"name\": \"Nikon D35020\",\r\n      \"display_name\": \"camera\",\r\n      \"description\": \"is one of our favorite DSLRs for photography students\"\r\n    }"
+                },
+                "1" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test test\"\r\n    }"
+                },
+                "2" : {
+                  "value" : "    {\r\n      \"description\": \"test\"\r\n    }"
+                },
+                "3" : {
+                  "value" : "    {\r\n      \"description\": \"test  \"\r\n    }"
+                },
+                "4" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test \"\r\n    }"
+                },
+                "5" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test \"\r\n    }"
+                },
+                "6" : {
+                  "value" : "    {\r\n      \"description\": \"test test\"\r\n    }"
+                },
+                "7" : {
+                  "value" : "    {\r\n    \"category\": \"test\",\r\n    \"name\": \"test\",\r\n    \"display_name\": \"test\",\r\n    \"description\": \"test \"\r\n    }"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "name" : {
+                    "type" : "string"
+                  },
+                  "description" : {
+                    "type" : "string"
+                  },
+                  "category" : {
+                    "type" : "string"
+                  },
+                  "display_name" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "    {\r\n      \"category\": \"electronics\",\r\n      \"name\": \"Nikon D35020\",\r\n      \"display_name\": \"camera\",\r\n      \"description\": \"is one of our favorite DSLRs for photography students\"\r\n    }"
+                },
+                "1" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test test\"\r\n    }"
+                },
+                "2" : {
+                  "value" : "    {\r\n      \"description\": \"test\"\r\n    }"
+                },
+                "3" : {
+                  "value" : "    {\r\n      \"description\": \"test  \"\r\n    }"
+                },
+                "4" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test \"\r\n    }"
+                },
+                "5" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test \"\r\n    }"
+                },
+                "6" : {
+                  "value" : "    {\r\n      \"description\": \"test test\"\r\n    }"
+                },
+                "7" : {
+                  "value" : "    {\r\n    \"category\": \"test\",\r\n    \"name\": \"test\",\r\n    \"display_name\": \"test\",\r\n    \"description\": \"test \"\r\n    }"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "404" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "delete" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "name" : {
+                    "type" : "string"
+                  },
+                  "description" : {
+                    "type" : "string"
+                  },
+                  "category" : {
+                    "type" : "string"
+                  },
+                  "display_name" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "    {\r\n      \"category\": \"electronics\",\r\n      \"name\": \"Nikon D35020\",\r\n      \"display_name\": \"camera\",\r\n      \"description\": \"is one of our favorite DSLRs for photography students\"\r\n    }"
+                },
+                "1" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test test\"\r\n    }"
+                },
+                "2" : {
+                  "value" : "    {\r\n      \"description\": \"test\"\r\n    }"
+                },
+                "3" : {
+                  "value" : "    {\r\n      \"description\": \"test  \"\r\n    }"
+                },
+                "4" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test \"\r\n    }"
+                },
+                "5" : {
+                  "value" : "    {\r\n      \"category\": \"test\",\r\n      \"name\": \"test\",\r\n      \"display_name\": \"test\",\r\n      \"description\": \"test \"\r\n    }"
+                },
+                "6" : {
+                  "value" : "    {\r\n      \"description\": \"test test\"\r\n    }"
+                },
+                "7" : {
+                  "value" : "    {\r\n    \"category\": \"test\",\r\n    \"name\": \"test\",\r\n    \"display_name\": \"test\",\r\n    \"description\": \"test \"\r\n    }"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:3000"
+      } ]
+    },
+    "/products/2" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:3000"
+      } ]
+    },
+    "/products" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "name" : {
+                    "type" : "string"
+                  },
+                  "description" : {
+                    "type" : "string"
+                  },
+                  "category" : {
+                    "type" : "string"
+                  },
+                  "display_name" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "    {\r\n      \"category\": \"electronics\",\r\n      \"name\": \"Nikon D35020\",\r\n      \"display_name\": \"camera\",\r\n      \"description\": \"is one of our favorite DSLRs for photography students\"\r\n    }"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:3000"
+      } ]
+    }
+  }
+}
