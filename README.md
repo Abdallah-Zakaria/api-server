@@ -5,17 +5,19 @@
 [swaggerhub](https://app.swaggerhub.com/apis/Abdallah-Zakaria/401-d5-test/0.1)
 
 ## Setup 
-**initialize the server**
-- `npm i -g json-server`
-**start the server**
-- `json-server id=_id --watch data/db.json --routes data/routes.json`
-
+  - `npm init -y`
+  - `npm i express dotenv `
+  - pass your port number
+  - start the server `node index.js`
 ## Test
-- GET ALL: GET - http://localhost:3000/categories
-- GET SOME: GET - http://localhost:3000/categories?category=electronics
-- GET ONE: GET - http://localhost:3000/categories/1
-- UPDATE ONE: PATCH or PUT - http://localhost:3000/categories/1
-- DELETE ONE: DELETE - http://localhost:3000/categories/1
+- manual test
+  - GET ALL: GET - http://localhost:3000/categories
+  - GET ONE: GET - http://localhost:3000/categories/1
+  - UPDATE ONE: PATCH or PUT - http://localhost:3000/categories/1
+  - DELETE ONE: DELETE - http://localhost:3000/categories/1
+- jest test
+  - `npm i -D jest supertest`
+  - `npm test <'file name'>`
 
 ## UML
-![UML](img/class06.jpg)
+![UML](img/class07.jpg)
