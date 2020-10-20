@@ -5,7 +5,7 @@ const supertest = require('supertest');
 const mockRequest = supertest(server.server);
 
 describe('API testing' , ()=>{
-  describe('API testing || products routing', ()=>{
+  xdescribe('API testing || products routing', ()=>{
     it('route:/products method:GET >> should response 200',()=>{
       return mockRequest.get('/products').then(result=>{
         expect(result.status).toBe(200);
@@ -37,7 +37,7 @@ describe('API testing' , ()=>{
       });
     });
   });
-  describe('API testing || category routing', ()=>{
+  xdescribe('API testing || category routing', ()=>{
     it('route:/categories method:GET >> should response 200',()=>{
       return mockRequest.get('/categories').then(result=>{
         expect(result.status).toBe(200);
