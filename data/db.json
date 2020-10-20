@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "name": "electronics",
+      "display_name": "null",
+      "description": "electronics camera and pc's",
+      "_id": 1
+    },
+    {
+      "name": "test",
+      "display_name": "test",
+      "description": "test",
+      "_id": 2
+    }
+  ],
+  "products": [
+    {
+      "category": "electronics",
+      "name": "Nikon D35020",
+      "display_name": "camera",
+      "description": "is one of our favorite DSLRs for photography students",
+      "_id": 1
+    },
+    {
+      "category": "electronics",
+      "name": "ThinkPad",
+      "display_name": "laptop",
+      "description": "poerful pc for coding ",
+      "_id": 2
+    }
+  ]
+}
