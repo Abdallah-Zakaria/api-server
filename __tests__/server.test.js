@@ -1,8 +1,8 @@
 'use strict';
 
 const server = require('../lib/server');
-const supertest = require('supertest');
-const mockRequest = supertest(server.server);
+const supergoose = require('@code-fellows/supergoose');
+const mockRequest = supergoose(server.server);
 
 describe('API testing' , ()=>{
   xdescribe('API testing || products routing', ()=>{
@@ -21,14 +21,14 @@ describe('API testing' , ()=>{
         expect(result.status).toBe(201);
       });
     });
-    it('route:/products/:id method:PUT >> should response 302',()=>{
+    it('route:/products/:id method:PUT >> should response 202',()=>{
       return mockRequest.put('/products/1').then(result=>{
-        expect(result.status).toBe(302);
+        expect(result.status).toBe(202);
       });
     });
-    it('route:/products/:id method:PATCH >> should response 302',()=>{
+    it('route:/products/:id method:PATCH >> should response 202',()=>{
       return mockRequest.patch('/products/1').then(result=>{
-        expect(result.status).toBe(302);
+        expect(result.status).toBe(202);
       });
     });
     it('route:/products/:id method:DELETE >> should response 202',()=>{
@@ -53,14 +53,14 @@ describe('API testing' , ()=>{
         expect(result.status).toBe(201);
       });
     });
-    it('route:/categories/:id method:PUT >> should response 302',()=>{
+    it('route:/categories/:id method:PUT >> should response 202',()=>{
       return mockRequest.put('/categories/1').then(result=>{
-        expect(result.status).toBe(302);
+        expect(result.status).toBe(202);
       });
     });
-    it('route:/categories/:id method:PATCH >> should response 302',()=>{
+    it('route:/categories/:id method:PATCH >> should response 202',()=>{
       return mockRequest.patch('/categories/1').then(result=>{
-        expect(result.status).toBe(302);
+        expect(result.status).toBe(202);
       });
     });
     it('route:/categories/:id method:DELETE >> should response 202',()=>{
