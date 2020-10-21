@@ -1,71 +1,118 @@
 'use strict';
 
 const server = require('../lib/server');
-const supertest = require('supertest');
-const mockRequest = supertest(server.server);
+const supergoose = require('@code-fellows/supergoose');
+const mockRequest = supergoose(server.server);
 
-describe('API testing' , ()=>{
-  xdescribe('API testing || products routing', ()=>{
-    it('route:/products method:GET >> should response 200',()=>{
-      return mockRequest.get('/products').then(result=>{
+describe('API testing', () => {
+
+  describe('API testing || products routing', () => {
+    let obj = { 'category': 'test', 'name': 'test', 'display_name': 'test', 'description': 'test' };
+    let newObj = { 'category': 'test', 'name': 'test', 'display_name': 'test', 'description': 'test' };
+    it('route:/products method:GET >> should response 200', () => {
+      return mockRequest.get('/api/v1/products').then(result => {
         expect(result.status).toBe(200);
       });
     });
-    it('route:/products/:id method:GET >> should response 200',()=>{
-      return mockRequest.get('/products/1').then(result=>{
-        expect(result.status).toBe(200);
+    it('route:/products/:id method:GET >> should response 200', () => {
+      return mockRequest.post('/api/v1/products').send(obj).then((data) => {
+        return mockRequest.get(`/api/v1/products/${data.body._id}`).then((results) => {
+          expect(results.status).toBe(200);
+          Object.keys(obj).forEach((key) => {
+            expect(obj[key]).toEqual(results.body[key]);
+          });
+        });
       });
     });
-    it('route:/products method:POST >> should response 201',()=>{
-      return mockRequest.post('/products').then(result=>{
+    it('route:/products method:POST >> should response 201', () => {
+      return mockRequest.post('/api/v1/products').send(obj).then(result => {
         expect(result.status).toBe(201);
+        Object.keys(obj).forEach(key => {
+          expect(obj[key]).toEqual(result.body[key]);
+        });
       });
     });
-    it('route:/products/:id method:PUT >> should response 302',()=>{
-      return mockRequest.put('/products/1').then(result=>{
-        expect(result.status).toBe(302);
+    it('route:/products/:id method:PUT >> should response 202', () => {
+      return mockRequest.post('/api/v1/products').send(obj).then(data => {
+        return mockRequest.put(`/api/v1/products/${data.body._id}`).send(newObj).then(result => {
+          expect(result.status).toBe(202);
+          Object.keys(newObj).forEach(key=>{
+            expect(newObj[key]).toEqual(result.body[key]);
+          });
+        });
       });
     });
-    it('route:/products/:id method:PATCH >> should response 302',()=>{
-      return mockRequest.patch('/products/1').then(result=>{
-        expect(result.status).toBe(302);
+    it('route:/products/:id method:PUT >> should response 202', () => {
+      return mockRequest.post('/api/v1/products').send(obj).then(data => {
+        return mockRequest.patch(`/api/v1/products/${data.body._id}`).send(newObj).then(result => {
+          expect(result.status).toBe(202);
+          Object.keys(newObj).forEach(key=>{
+            expect(newObj[key]).toEqual(result.body[key]);
+          });
+        });
       });
     });
-    it('route:/products/:id method:DELETE >> should response 202',()=>{
-      return mockRequest.delete('/products/1').then(result=>{
-        expect(result.status).toBe(202);
+    it('route:/products/:id method:DELETE >> should response 202', () => {
+      return mockRequest.post('/api/v1/products').send(obj).then(data=>{
+        return mockRequest.delete(`/api/v1/products/${data.body._id}`).then(result => {
+          expect(result.status).toBe(202);
+          expect({}).toEqual(result.body);
+        });
       });
     });
   });
-  xdescribe('API testing || category routing', ()=>{
-    it('route:/categories method:GET >> should response 200',()=>{
-      return mockRequest.get('/categories').then(result=>{
+  describe('API testing || category routing', () => {
+    let obj = { 'name': 'test', 'display_name': 'test', 'description': 'test' };
+    let newObj = { 'name': 'test', 'display_name': 'test', 'description': 'test' };
+    it('route:/categories method:GET >> should response 200', () => {
+      return mockRequest.get('/api/v1/categories').then(result => {
         expect(result.status).toBe(200);
       });
     });
-    it('route:/categories/:id method:GET >> should response 200',()=>{
-      return mockRequest.get('/categories/1').then(result=>{
-        expect(result.status).toBe(200);
+    it('route:/categories/:id method:GET >> should response 200', () => {
+      return mockRequest.post('/api/v1/categories').send(obj).then((data) => {
+        return mockRequest.get(`/api/v1/categories/${data.body._id}`).then((results) => {
+          expect(results.status).toBe(200);
+          Object.keys(obj).forEach((key) => {
+            expect(obj[key]).toEqual(results.body[key]);
+          });
+        });
       });
     });
-    it('route:/categories method:POST >> should response 201',()=>{
-      return mockRequest.post('/categories').then(result=>{
+    it('route:/categories method:POST >> should response 201', () => {
+      return mockRequest.post('/api/v1/categories').send(obj).then(result => {
         expect(result.status).toBe(201);
+        Object.keys(obj).forEach(key => {
+          expect(obj[key]).toEqual(result.body[key]);
+        });
       });
     });
-    it('route:/categories/:id method:PUT >> should response 302',()=>{
-      return mockRequest.put('/categories/1').then(result=>{
-        expect(result.status).toBe(302);
+    it('route:/categories/:id method:PUT >> should response 202', () => {
+      return mockRequest.post('/api/v1/categories').send(obj).then(data => {
+        return mockRequest.put(`/api/v1/categories/${data.body._id}`).send(newObj).then(result => {
+          expect(result.status).toBe(202);
+          Object.keys(newObj).forEach(key=>{
+            expect(newObj[key]).toEqual(result.body[key]);
+          });
+        });
       });
     });
-    it('route:/categories/:id method:PATCH >> should response 302',()=>{
-      return mockRequest.patch('/categories/1').then(result=>{
-        expect(result.status).toBe(302);
+    it('route:/categories/:id method:PUT >> should response 202', () => {
+      return mockRequest.post('/api/v1/categories').send(obj).then(data => {
+        return mockRequest.patch(`/api/v1/categories/${data.body._id}`).send(newObj).then(result => {
+          expect(result.status).toBe(202);
+          Object.keys(newObj).forEach(key=>{
+            expect(newObj[key]).toEqual(result.body[key]);
+          });
+        });
       });
     });
-    it('route:/categories/:id method:DELETE >> should response 202',()=>{
-      return mockRequest.delete('/categories/1').then(result=>{
-        expect(result.status).toBe(202);
+    it('route:/categories/:id method:DELETE >> should response 202', () => {
+      return mockRequest.post('/api/v1/categories').send(obj).then(data=>{
+        return mockRequest.delete(`/api/v1/categories/${data.body._id}`).then(result => {
+          expect(result.status).toBe(202);
+          expect({}).toEqual(result.body);
+        });
       });
     });
   });
