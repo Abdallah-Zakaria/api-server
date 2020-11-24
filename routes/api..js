@@ -4,6 +4,8 @@ const express = require('express');
 const router = express.Router();
 const categoryModule = require('../lib/models/categories/categories.collection');
 const productModule = require('../lib/models/products/products.collection');
+const tasksModule = require('../lib/models/todo/todo.collection');
+
 
 // category routes 
 router.param('model', getModel);
@@ -23,6 +25,9 @@ function getModel(req, res, next) {
     break;
   case 'products':
     req.model = productModule;
+    break;
+  case 'todo':
+    req.model = tasksModule;
     break;
   default:
     break;
